@@ -94,8 +94,8 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/HAL3 \
         $(LOCAL_PATH)/../usbcamcore/inc \
         hardware/libhardware/include/hardware \
-        hardware/qcom/media/libstagefrighthw \
-        hardware/qcom/media/mm-core/inc \
+        hardware/qcom/media/$(QCOM_HARDWARE_VARIANT)/libstagefrighthw \
+        hardware/qcom/media/$(QCOM_HARDWARE_VARIANT)/mm-core/inc \
         system/core/include/cutils \
         system/core/include/system \
         system/media/camera/include/system \
@@ -103,7 +103,7 @@ LOCAL_C_INCLUDES := \
 
 #HAL 1.0 Include paths
 LOCAL_C_INCLUDES += \
-        hardware/qcom/camera/QCamera2/HAL
+        hardware/qcom/camera/$(QCOM_HARDWARE_VARIANT)/QCamera2/HAL
 
 ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -125,7 +125,7 @@ endif
 LOCAL_C_INCLUDES += \
         $(TARGET_OUT_HEADERS)/qcom/display
 LOCAL_C_INCLUDES += \
-        hardware/qcom/display/libqservice
+        hardware/qcom/display/$(QCOM_HARDWARE_VARIANT)/libqservice
 LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl libsync libgui
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
