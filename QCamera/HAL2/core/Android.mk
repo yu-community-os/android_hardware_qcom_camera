@@ -53,9 +53,9 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../../stack/mm-jpeg-interface/inc\
         $(TARGET_OUT_INTERMEDIATES)/include/mm-camera-interface_badger \
 
-LOCAL_C_INCLUDES += hardware/qcom/display/libgralloc \
-        hardware/qcom/display/libgenlock \
-        hardware/qcom/media/libstagefrighthw \
+LOCAL_C_INCLUDES += hardware/qcom/display/$(QCOM_HARDWARE_VARIANT)/libgralloc \
+        hardware/qcom/display/$(QCOM_HARDWARE_VARIANT)/libgenlock \
+        hardware/qcom/media/$(QCOM_HARDWARE_VARIANT)/libstagefrighthw \
 	system/media/camera/include
 
 # if debug service layer and up , use stub camera!

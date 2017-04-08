@@ -39,7 +39,7 @@ LOCAL_C_INCLUDES += \
     frameworks/base/include/media \
     external/skia/include/core \
     external/skia/include/images \
-    hardware/qcom/display/libgralloc \
+    hardware/qcom/display/$(QCOM_HARDWARE_VARIANT)/libgralloc \
     frameworks/av/include/media/stagefright \
     frameworks/native/include/media/openmax \
 
