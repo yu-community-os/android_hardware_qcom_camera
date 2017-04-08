@@ -54,7 +54,7 @@ LOCAL_C_INCLUDES := \
         $(TARGET_OUT_INTERMEDIATES)/include/mm-camera-interface_badger \
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/display \
-        hardware/qcom/media/libstagefrighthw \
+        hardware/qcom/media/$(QCOM_HARDWARE_VARIANT)/libstagefrighthw \
 	system/media/camera/include
 
 # if debug service layer and up , use stub camera!
